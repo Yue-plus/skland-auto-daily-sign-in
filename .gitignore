@@ -1,0 +1,6 @@
+.idea/
+.vs/
+.vscode/
+.fleet/
+*.log
+*.har
