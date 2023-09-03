@@ -15,6 +15,19 @@ HEADER = {
 UID_LIST = []
 
 
+def user_auth_generate_cred_by_code():
+    response = requests.post(
+        url='https://zonai.skland.com/api/v1/user/auth/generate_cred_by_code',
+        headers=HEADER,
+        json={
+            'kind': 1,
+            'code': '长 176 的字符串，生成原理不明。'
+        }
+    )
+
+    print(response.status_code, response.text)
+
+
 def game_player_binding():
     response = requests.get('https://zonai.skland.com/api/v1/game/player/binding', headers=HEADER)
 
